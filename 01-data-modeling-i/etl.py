@@ -36,6 +36,8 @@ def process(cur, conn, filepath):
     all_files = get_files(filepath)
 
     for datafile in all_files:
+        print('for datafile in all_files:')
+        
         with open(datafile, "r") as f:
             data = json.loads(f.read())
             for each in data:
