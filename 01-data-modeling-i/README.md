@@ -6,6 +6,8 @@
 python -m venv ENV
 source ENV/bin/activate
 pip install -r requirements.txt
+
+
 ```
 
 ### Prerequisite when install psycopg2 package
@@ -33,3 +35,6 @@ To shutdown, press Ctrl+C and run:
 ```sh
 docker-compose down
 ```
+## Running etl.py
+python create_tables.py
+python etl.py
