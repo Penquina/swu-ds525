@@ -1,0 +1,15 @@
+20220901
+
+Initial process
+
+docker
+gitpod /workspace/swu-ds525 (main) $ cd 02-data-modeling-ii/
+gitpod /workspace/swu-ds525/02-data-modeling-ii (main) $ source ENV/bin/activate
+(ENV) gitpod /workspace/swu-ds525/02-data-modeling-ii (main) $ docker-compose up
+
+bash
+gitpod /workspace/swu-ds525 (main) $ cd 02-data-modeling-ii/
+gitpod /workspace/swu-ds525/02-data-modeling-ii (main) $ source ENV/bin/activate
+(ENV) gitpod /workspace/swu-ds525/02-data-modeling-ii (main) $  pip install -r requirements.txt 
+(ENV) gitpod /workspace/swu-ds525/02-data-modeling-ii (main) $ python etl.py 
+
