@@ -5,7 +5,6 @@ from typing import List
 
 from cassandra.cluster import Cluster
 
-
 table_drop = "DROP TABLE events"
 
 table_create = """
