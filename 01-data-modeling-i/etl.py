@@ -5,14 +5,12 @@ from typing import List
 
 import psycopg2
 
-
 table_insert = """
     INSERT INTO users (
         xxx
     ) VALUES (%s)
     ON CONFLICT (xxx) DO NOTHING
 """
-
 
 def get_files(filepath: str) -> List[str]:
     """
@@ -71,7 +69,8 @@ def process(cur, conn, filepath):
                     INSERT INTO actors (
                         id,
                         login
-                    ) VALUES ({each["actor"]["id"]}, '{each["actor"]["login"]}')
+                    ) VALUES ({each["actor"]["id"]}, 
+                    '{each["actor"]["login"]}')
                     ON CONFLICT (id) DO NOTHING
                 """
                 #Importance in "ON CONFLICT (id) DO NOTHING "
@@ -85,8 +84,12 @@ def process(cur, conn, filepath):
                     INSERT INTO events (
                         id,
                         type,
-                        actor_id
-                    ) VALUES ('{each["id"]}', '{each["type"]}', '{each["actor"]["id"]}')
+                        actor_id,
+                        actor_url
+                    ) VALUES ('{each["id"]}',
+                     '{each["type"]}',
+                     '{each["actor"]["id"]}',
+                     '{each["actor"]["url"]}')
                     ON CONFLICT (id) DO NOTHING
                 """
                 # print(insert_statement)

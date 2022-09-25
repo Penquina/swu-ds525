@@ -6,7 +6,7 @@ import psycopg2
 #Check type of variable use in drop_tables
 #create new type
 PostgresCursor = NewType("PostgresCursor", psycopg2.extensions.cursor)
-PostgresConn = NewType("PostgresConn", psycopg2.extensions.connection)
+PostgresConn   = NewType("PostgresConn", psycopg2.extensions.connection)
 #Create SQL
 table_drop_events = "DROP TABLE IF EXISTS events"
 table_drop_actors = "DROP TABLE IF EXISTS actors"
@@ -25,6 +25,7 @@ table_create_events = """
         id text,
         type text,
         actor_id int,
+        actor_url text,
         PRIMARY KEY(id),
         CONSTRAINT fk_actor FOREIGN KEY(actor_id) REFERENCES actors(id)
     )
