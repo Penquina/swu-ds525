@@ -1,0 +1,20 @@
+//// -- LEVEL 1
+//// -- Schemas, Tables and References
+
+// Creating tables
+// You can define the tables with full schema names
+Table events {
+  id text
+  type text
+  actor_id int
+  url text
+  created_at text
+}
+
+// If schema name is omitted, it will default to "public" schema.
+Table actors as A {
+  id int [pk, increment] // auto-increment
+  login text
+}
+
+Ref: A.id > events.actor_id  
