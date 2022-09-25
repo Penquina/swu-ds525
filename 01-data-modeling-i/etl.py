@@ -5,6 +5,8 @@ from typing import List
 
 import psycopg2
 
+#20220925 22:25
+
 table_insert = """
     INSERT INTO users (
         xxx

@@ -1,6 +1,6 @@
 from typing import NewType
 #pytopn ver up from 3.6
-
+#20220925 22:25
 import psycopg2
 
 #Check type of variable use in drop_tables
