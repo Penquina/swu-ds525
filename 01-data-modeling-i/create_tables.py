@@ -10,7 +10,7 @@ PostgresConn   = NewType("PostgresConn", psycopg2.extensions.connection)
 #Create SQL
 table_drop_events = "DROP TABLE IF EXISTS events"
 table_drop_actors = "DROP TABLE IF EXISTS actors"
-
+#1.
 #Create table actors
 table_create_actors = """
     CREATE TABLE IF NOT EXISTS actors (
@@ -26,6 +26,7 @@ table_create_events = """
         type text,
         actor_id int,
         actor_url text,
+        created_at text,
         PRIMARY KEY(id),
         CONSTRAINT fk_actor FOREIGN KEY(actor_id) REFERENCES actors(id)
     )

@@ -79,17 +79,21 @@ def process(cur, conn, filepath):
                 # print(insert_statement)
                 cur.execute(insert_statement)
 
-                # Insert data into tables here
+                # Insert data into tables here 
+                # 2. from create table in create_tables.py increase feature to have the same in that columns  
+                # 3. increase '{each["actor"]["url"]}','{each["created_at"]}' in the command
                 insert_statement = f"""
                     INSERT INTO events (
                         id,
                         type,
                         actor_id,
-                        actor_url
+                        actor_url,
+                        created_at
                     ) VALUES ('{each["id"]}',
                      '{each["type"]}',
                      '{each["actor"]["id"]}',
-                     '{each["actor"]["url"]}')
+                     '{each["actor"]["url"]}',
+                     '{each["created_at"]}')
                     ON CONFLICT (id) DO NOTHING
                 """
                 # print(insert_statement)
