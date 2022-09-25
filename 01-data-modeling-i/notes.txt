@@ -5,4 +5,35 @@ gitpod /workspace/swu-ds525/01-data-modeling-i (main) $ source ENV/bin/activate
 (ENV) gitpod /workspace/swu-ds525/01-data-modeling-i (main) $ pip install -r requirements.txt 
 (ENV) gitpod /workspace/swu-ds525/01-data-modeling-i (main) $ python etl.py
 
+Another terminal 
+gitpod /workspace/swu-ds525 (main) $ cd 01-data-modeling-i/
+gitpod /workspace/swu-ds525/01-data-modeling-i (main) $ ls -ltr
+gitpod /workspace/swu-ds525/01-data-modeling-i (main) $ python -m venv ENV
+gitpod /workspace/swu-ds525/01-data-modeling-i (main) $ source ENV/bin/activate
+(ENV) gitpod /workspace/swu-ds525/01-data-modeling-i (main) $ pip install -r requirements.txt 
 (ENV) gitpod /workspace/swu-ds525/01-data-modeling-i (main) $ docker-compose up
+
+If can not push files to git hub -> use these command
+
+gitpod /workspace/swu-ds525 (main) $ ls -ltr
+total 4
+-rw-r--r-- 1 gitpod gitpod  11 Aug 22 15:59 README.md
+drwxr-xr-x 5 gitpod gitpod  74 Aug 22 17:10 ENV
+drwxr-xr-x 2 gitpod gitpod 151 Sep  1 16:10 data
+drwxr-xr-x 3 gitpod gitpod 115 Sep  1 17:09 02-data-modeling-ii
+drwxr-xr-x 3 gitpod gitpod 157 Sep  1 18:12 01-data-modeling-i
+drwxr-xr-x 2 gitpod gitpod 119 Sep 10 10:05 03-building-a-data-warehouse
+gitpod /workspace/swu-ds525 (main) $ git fetch origin
+gitpod /workspace/swu-ds525 (main) $ git rebase origin/main
+Successfully rebased and updated refs/heads/main.
+gitpod /workspace/swu-ds525 (main) $ git push origin main
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 1.48 KiB | 1.48 MiB/s, done.
+Total 15 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 4 local objects.
+To https://github.com/Penquina/swu-ds525.git
+   81fd56a..9107e12  main -> main
+gitpod /workspace/swu-ds525 (main) $ git log
