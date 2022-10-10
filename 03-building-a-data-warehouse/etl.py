@@ -28,6 +28,13 @@ copy_table_queries = [
     REGION 'us-east-1'
     """,
 ]
+
+'''
+COPY staging_events FROM 's3://kik-my-titanic/github_events_01.json'
+CREDENTIALS 'aws_iam_role=arn:aws:iam::074831285365:role/LabRole'
+JSON 's3://kik-my-titanic/events_json_path.json' REGION 'us-east-1'
+'''
+
 insert_table_queries = [
     """
     INSERT INTO
