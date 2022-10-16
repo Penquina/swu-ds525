@@ -1,0 +1,11 @@
+gitpod /workspace/swu-ds525/03-building-a-data-warehouse (main) $ ls -ltr
+total 88
+-rw-r--r-- 1 gitpod gitpod    27 Sep 10 10:00 README.md
+-rw-r--r-- 1 gitpod gitpod   125 Sep 10 10:03 events_json_path.json
+-rw-r--r-- 1 gitpod gitpod    79 Sep 10 10:05 requirements.txt
+-rw-r--r-- 1 gitpod gitpod 70104 Sep 10 10:12 github_events_01.json
+-rw-r--r-- 1 gitpod gitpod  1938 Oct 10 16:54 etl.py
+gitpod /workspace/swu-ds525/03-building-a-data-warehouse (main) $ python -m venv ENV
+gitpod /workspace/swu-ds525/03-building-a-data-warehouse (main) $ source ENV/bin/activate
+(ENV) gitpod /workspace/swu-ds525/03-building-a-data-warehouse (main) $ pip install -r requirements.txt 
+(ENV) gitpod /workspace/swu-ds525/03-building-a-data-warehouse (main) $ python etl.py 
