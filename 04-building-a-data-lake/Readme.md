@@ -1,2 +1,1 @@
-![Image](https://drive.google.com/file/d/1Nkq3sSefZWa12plWqWhWOELOE21Hgc6V/view?usp=sharing/Screenshot 2022-09-24 170116.png)
-
+https://github.com/Penquina/swu-ds525/issues/1#issue-1419409413
