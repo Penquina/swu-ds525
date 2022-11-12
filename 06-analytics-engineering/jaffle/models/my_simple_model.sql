@@ -1,5 +1,4 @@
 select
-    1 / 100.0 as a
-    , 89 / 100.0 as b
-    , 20 / 100.0 as c
-    
+    {{ divide_by_hundred(1) }} as a
+    , {{ divide_by_hundred(89) }} as b
+    , {{ divide_by_hundred(20) }} as c

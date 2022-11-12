@@ -5,8 +5,8 @@ select
     , c.first_name
     , c.last_name
 
-from jaffle_shop_orders as o
-join jaffle_shop_customers as c
-on 
+from {{ source('jaffle', 'jaffle_shop_orders') }} as o
+join {{ source('jaffle', 'jaffle_shop_customers') }} as c
+on
     o.user_id = c.id
 where status = 'completed'
