@@ -1,4 +1,6 @@
+#import DAG เป็น pipeline
 from airflow import DAG
+#import Timezone
 from airflow.utils import timezone
 #step 2 ใช้ EmptyOperator เลย import EmptyOperator เข้ามา
 from airflow.operators.empty import EmptyOperator
@@ -7,13 +9,21 @@ from airflow.operators.bash import BashOperator
 #step 8
 from airflow.operators.python import PythonOperator
 
-#context manager
+#context manager เป็นการประกาศหัว
 #"my_dag" ชื่อเดียวกับชื่อ file
 #start date 2022, 10, 8
 # schedule = None ยังไม่schedule
 # step10
 # schedule 
 # schedule เที่ยงคืน คือ 0
+#v1  schedule = None ยังไม่set schedule
+# with DAG(
+#     "my_dag",
+#     start_date = timezone.datetime(2022, 10, 8),
+#     schedule = None,
+# ):
+#    t1 = EmptyOperator( task_id = "t1")
+
 with DAG(
     "my_dag",
     start_date = timezone.datetime(2022, 10, 8),
