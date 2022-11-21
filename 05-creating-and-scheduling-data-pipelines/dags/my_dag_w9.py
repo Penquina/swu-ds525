@@ -7,9 +7,14 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
 
 #ชื่อฟังก์ชั่นต้องไม่เหมือนชื่อtask เลยใส่ _ นำหน้า
+#สามารถเขียนเพื่อเอาข้อมูลจาก context ออกมาได้
 
-def _say_hello():
-    print("Hello")
+def _say_hello( name="", **context ):
+    print(context)
+    datestamp = context["ds"]
+    #ใช้ได้แทน "name": "Kan {{ ds_nodash }}"
+    #ds_nodash = context["ds_nodash"]
+    print(f"Hello! {name} on {datestamp}")
 
 #logging มีระดับการlog => info, debug แล้วแต่การทำงาน
 def _print_log_messages():
@@ -27,13 +32,15 @@ with DAG(
 
     echo_hello = BashOperator(
         task_id = "echo_hello",
-        bash_command = "echo 'hello'",
+        bash_command = "echo 'hello' on {{ ds }}",
     )
-    
+#    op_kwargs รับข้อมูลเป็น dict
     say_hello = PythonOperator(
         task_id = "say_hello",
         python_callable = _say_hello,
-
+        op_kwargs = {
+            "name": "Kan {{ ds_nodash }}",
+        }
     )
 
     print_log_messages = PythonOperator(
