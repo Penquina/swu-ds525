@@ -2,22 +2,22 @@ from airflow import DAG
 from airflow.utils import timezone
 from airflow.operators.python import PythonOperator
 
-
+#task instance มาจาก context
 def _push(**context):
     # ti = context["ti"]
     # ti.xcom_push(key="name", value="Kan")
-    return ["Kan", "Chin", "Peeyapak", "Lyn", "Peerawit", "Kruewan", "Pongthanin", "Mindii", "Nuttapol", "Nattakan",]
 
+    return ["Kan", "Chin", "Peeyapak", "Lyn", "Peerawit", "Kruewan", "Pongthanin", "Mindii", "Nuttapol", "Nattakan",]
+    #return "Karn"
 
 def _pull(**context):
     ti = context["ti"]
     ds = context["ds"]
 
-    names = ti.xcom_pull(task_ids="push", key="return_value")
+    name = ti.xcom_pull(task_ids="push", key="return_value")
 
-    for each in names:
+    for each in name:
         print(f"Hello {each} on {ds}")
-
 
 with DAG(
     "test_xcom",
