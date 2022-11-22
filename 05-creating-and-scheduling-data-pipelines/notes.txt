@@ -1,0 +1,31 @@
+gitpod /workspace/swu-ds525 (main) $ cd 05-creating-and-scheduling-data-pipelines/
+gitpod /workspace/swu-ds525/05-creating-and-scheduling-data-pipelines (main) $ cd ../
+gitpod /workspace/swu-ds525 (main) $ docker exec -it 05-creating-and-scheduling-data-pipelines-
+05-creating-and-scheduling-data-pipelines-adminer-1            05-creating-and-scheduling-data-pipelines-airflow-triggerer-1  05-creating-and-scheduling-data-pipelines-postgres-1
+05-creating-and-scheduling-data-pipelines-airflow-scheduler-1  05-creating-and-scheduling-data-pipelines-airflow-webserver-1  05-creating-and-scheduling-data-pipelines-warehouse-1
+gitpod /workspace/swu-ds525 (main) $ docker exec -it 05-creating-and-scheduling-data-pipelines-a
+05-creating-and-scheduling-data-pipelines-adminer-1            05-creating-and-scheduling-data-pipelines-airflow-triggerer-1  
+05-creating-and-scheduling-data-pipelines-airflow-scheduler-1  05-creating-and-scheduling-data-pipelines-airflow-webserver-1  
+gitpod /workspace/swu-ds525 (main) $ docker exec -it 05-creating-and-scheduling-data-pipelines-a
+05-creating-and-scheduling-data-pipelines-adminer-1            05-creating-and-scheduling-data-pipelines-airflow-triggerer-1  
+05-creating-and-scheduling-data-pipelines-airflow-scheduler-1  05-creating-and-scheduling-data-pipelines-airflow-webserver-1  
+gitpod /workspace/swu-ds525 (main) $ docker exec -it 05-creating-and-scheduling-data-pipelines-a
+05-creating-and-scheduling-data-pipelines-adminer-1            05-creating-and-scheduling-data-pipelines-airflow-triggerer-1  
+05-creating-and-scheduling-data-pipelines-airflow-scheduler-1  05-creating-and-scheduling-data-pipelines-airflow-webserver-1  
+gitpod /workspace/swu-ds525 (main) $ docker exec -it 05-creating-and-scheduling-data-pipelines-airflow-scheduler-1 bash
+default@eb5fa062788b:/opt/airflow$ pwd
+/opt/airflow
+default@eb5fa062788b:/opt/airflow$ ls
+airflow.cfg  dags  logs  plugins  webserver_config.py
+default@eb5fa062788b:/opt/airflow$ cd dags/
+default@eb5fa062788b:/opt/airflow/dags$ cd data/
+default@eb5fa062788b:/opt/airflow/dags/data$ ls -ltr
+total 776
+-rw-r--r-- 1 default 33333 337840 Nov 22 16:31 github_events_03.json
+-rw-r--r-- 1 default 33333 169666 Nov 22 16:31 github_events_02.json
+-rw-r--r-- 1 default 33333  73641 Nov 22 16:31 github_events_01.json
+-rw-r--r-- 1 default 33333 164062 Nov 22 16:31 github_events_05.json
+-rw-r--r-- 1 default 33333  38882 Nov 22 16:31 github_events_04.json
+default@eb5fa062788b:/opt/airflow/dags/data$ pwd
+/opt/airflow/dags/data
+default@eb5fa062788b:/opt/airflow/dags/data$ 
