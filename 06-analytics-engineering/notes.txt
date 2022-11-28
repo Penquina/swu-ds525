@@ -1,0 +1,19 @@
+gitpod /workspace/swu-ds525 (main) $ 
+gitpod /workspace/swu-ds525 (main) $ 
+gitpod /workspace/swu-ds525 (main) $ cd 06-analytics-engineering/
+gitpod /workspace/swu-ds525/06-analytics-engineering (main) $ python -m venv ENV
+gitpod /workspace/swu-ds525/06-analytics-engineering (main) $ source ENV/bin/activate
+(ENV) gitpod /workspace/swu-ds525/06-analytics-engineering (main) $ pip install -r requirements.txt 
+(ENV) gitpod /workspace/swu-ds525/06-analytics-engineering/jaffle (main) $ dbt debug
+
+(ENV) gitpod /workspace/swu-ds525/06-analytics-engineering/jaffle (main) $ dbt docs generate
+17:21:43  Running with dbt=1.2.0
+17:21:43  Found 5 models, 8 tests, 0 snapshots, 0 analyses, 257 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+17:21:43  
+17:21:43  Concurrency: 1 threads (target='dev')
+17:21:43  
+17:21:44  Done.
+17:21:44  Building catalog
+17:21:44  Catalog written to /workspace/swu-ds525/06-analytics-engineering/jaffle/target/catalog.json
+(ENV) gitpod /workspace/swu-ds525/06-analytics-engineering/jaffle (main) $ dbt docs serve
+(ENV) gitpod /workspace/swu-ds525/06-analytics-engineering/jaffle (main) $ dbt test
