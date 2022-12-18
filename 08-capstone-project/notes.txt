@@ -1,0 +1,9 @@
+gitpod /workspace/swu-ds525 (main) $ cd 08-capstone-project/
+gitpod /workspace/swu-ds525/08-capstone-project (main) $ python -m venv ENV
+gitpod /workspace/swu-ds525/08-capstone-project (main) $ pip install boto3
+
+gitpod /workspace/swu-ds525/08-capstone-project (main) $ pip install dbt-core dbt-redshift
+
+
+
+redshift-cluster-1.cbdkb6riwsow.us-east-1.redshift.amazonaws.com:5439/dev
